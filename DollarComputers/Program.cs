@@ -8,6 +8,12 @@ namespace DollarComputers
 {
     static class Program
     {
+        public static SplashScreen splashScreen;
+        public static StartForm startForm;
+        public static SelectForm selectForm;
+        public static ProductInfoForm productinfoForm;
+        public static OrderForm orderForm;
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -16,7 +22,13 @@ namespace DollarComputers
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            startForm = new StartForm();
+            selectForm = new SelectForm();
+            productinfoForm = new ProductInfoForm();
+            orderForm = new OrderForm();
+            splashScreen = new SplashScreen();
+
+            Application.Run(splashScreen);
         }
     }
 }
