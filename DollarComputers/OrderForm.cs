@@ -34,5 +34,10 @@ namespace DollarComputers
                 " Your Order will be processed in 7-10 business days", "Order Confirmed",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Program.aboutForm.ShowDialog();
+        }
     }
 }

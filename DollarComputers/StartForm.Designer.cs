@@ -40,9 +40,10 @@
             // 
             this.NewOrderButton.AutoSize = true;
             this.NewOrderButton.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.NewOrderButton.Location = new System.Drawing.Point(218, 361);
+            this.NewOrderButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewOrderButton.Location = new System.Drawing.Point(435, 154);
             this.NewOrderButton.Name = "NewOrderButton";
-            this.NewOrderButton.Size = new System.Drawing.Size(368, 51);
+            this.NewOrderButton.Size = new System.Drawing.Size(270, 51);
             this.NewOrderButton.TabIndex = 0;
             this.NewOrderButton.Text = "Start a New Order";
             this.NewOrderButton.UseVisualStyleBackColor = false;
@@ -52,9 +53,10 @@
             // 
             this.SavedOrderButton.AutoSize = true;
             this.SavedOrderButton.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.SavedOrderButton.Location = new System.Drawing.Point(218, 431);
+            this.SavedOrderButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SavedOrderButton.Location = new System.Drawing.Point(435, 255);
             this.SavedOrderButton.Name = "SavedOrderButton";
-            this.SavedOrderButton.Size = new System.Drawing.Size(368, 51);
+            this.SavedOrderButton.Size = new System.Drawing.Size(270, 51);
             this.SavedOrderButton.TabIndex = 0;
             this.SavedOrderButton.Text = "Open a Saved Order";
             this.SavedOrderButton.UseVisualStyleBackColor = false;
@@ -64,9 +66,10 @@
             // 
             this.ExitButton.AutoSize = true;
             this.ExitButton.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.ExitButton.Location = new System.Drawing.Point(218, 498);
+            this.ExitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExitButton.Location = new System.Drawing.Point(435, 361);
             this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(368, 51);
+            this.ExitButton.Size = new System.Drawing.Size(270, 51);
             this.ExitButton.TabIndex = 0;
             this.ExitButton.Text = "Exit";
             this.ExitButton.UseVisualStyleBackColor = false;
@@ -75,9 +78,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::DollarComputers.Properties.Resources.pc;
-            this.pictureBox1.Location = new System.Drawing.Point(218, 64);
+            this.pictureBox1.Location = new System.Drawing.Point(21, 88);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(368, 277);
+            this.pictureBox1.Size = new System.Drawing.Size(390, 379);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -97,6 +100,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.ControlBox = false;
             this.Controls.Add(this.BuyLabel);
@@ -110,7 +114,7 @@
             this.MaximizeBox = false;
             this.Name = "StartForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Start Form";
+            this.Text = "Welcome to Dollar Computers";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
