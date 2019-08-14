@@ -6,13 +6,12 @@ namespace DollarComputers
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-
     enum ComputerField
     {
-       // PRODUCTID,
-        //COST,
-       // MANUFACTURER,
-        // MODEL,
+        // PRODUCTID,
+        COST,
+        MANUFACTURER,
+        MODEL,
         RAM_TYPE,
        // RAM_SIZE,
         DISPLAYTYPE,
@@ -23,9 +22,9 @@ namespace DollarComputers
        // CPU_TYPE,
        // CPU_SPEED,
         CPU_NUMBER,
-      //  CONDITION,
+        CONDITION,
      //   OS,
-      //  PLATFORM,
+        PLATFORM,
        // HDD_SIZE,
         HDD_SPEED,
        // GPU_TYPE,

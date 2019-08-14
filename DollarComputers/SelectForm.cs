@@ -34,7 +34,6 @@ namespace DollarComputers
             using (StreamWriter outputString = new StreamWriter(
                 File.Open("Product.txt", FileMode.Create)))
             {
-
                 //write stuff to the file
                 outputString.WriteLine(currentRow.Cells[0].Value.ToString());
                 outputString.WriteLine(currentRow.Cells[1].Value.ToString());
@@ -53,8 +52,12 @@ namespace DollarComputers
                 outputString.WriteLine(currentRow.Cells[19].Value.ToString());
                 outputString.WriteLine(currentRow.Cells[21].Value.ToString());
                 outputString.WriteLine(currentRow.Cells[30].Value.ToString());
-
-
+                outputString.WriteLine(currentRow.Cells[24].Value.ToString());
+                outputString.WriteLine(currentRow.Cells[25].Value.ToString());
+                outputString.WriteLine(currentRow.Cells[28].Value.ToString());
+                outputString.WriteLine(currentRow.Cells[29].Value.ToString());
+     
+                
                 //cleanup
                 outputString.Close();
                 outputString.Dispose();

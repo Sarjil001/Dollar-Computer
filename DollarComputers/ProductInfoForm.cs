@@ -43,7 +43,7 @@ namespace DollarComputers
             {
                 //Read stuff to the file into the Student Object
                 Program.products.productID = short.Parse(inputStream.ReadLine());
-               // Program.products.cost = int.Parse(inputStream.ReadLine());
+                Program.products.cost = decimal.Parse(inputStream.ReadLine());
                 Program.products.manufacturer = inputStream.ReadLine();
                 Program.products.model = inputStream.ReadLine();
                 Program.products.RAM_size = inputStream.ReadLine();
@@ -64,7 +64,7 @@ namespace DollarComputers
                 inputStream.Dispose();
 
                 ProductIDTextbox.Text = Program.products.productID.ToString();
-                CostTextbox.Text = Program.products.cost.ToString();
+                CostTextbox.Text = String.Format("{0:C}",Program.products.cost);
                 ManufacturerTextbox.Text = Program.products.manufacturer;
                 ModelTextbox.Text = Program.products.model;
                 MemoryTextbox.Text = Program.products.RAM_size;

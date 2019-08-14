@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartForm));
             this.NewOrderButton = new System.Windows.Forms.Button();
             this.SavedOrderButton = new System.Windows.Forms.Button();
             this.ExitButton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BuyLabel = new System.Windows.Forms.Label();
+            this.OpenFileDialogBox = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,13 +98,16 @@
             this.BuyLabel.Text = "Buy Today !!";
             this.BuyLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // OpenFileDialogBox
+            // 
+            this.OpenFileDialogBox.FileName = "OpenSavedFile";
+            // 
             // StartForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(784, 561);
-            this.ControlBox = false;
             this.Controls.Add(this.BuyLabel);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.ExitButton);
@@ -110,8 +115,10 @@
             this.Controls.Add(this.NewOrderButton);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "StartForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Welcome to Dollar Computers";
@@ -128,6 +135,7 @@
         private System.Windows.Forms.Button ExitButton;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label BuyLabel;
+        private System.Windows.Forms.OpenFileDialog OpenFileDialogBox;
     }
 }
 

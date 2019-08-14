@@ -31,9 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductInfoForm));
             this.ProductInfoFormMenuStrip = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.openToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.saveToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -76,6 +74,8 @@
             this.AnotherFormButton = new System.Windows.Forms.Button();
             this.CancelButton = new System.Windows.Forms.Button();
             this.NextButton = new System.Windows.Forms.Button();
+            this.openToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.ProductInfoFormMenuStrip.SuspendLayout();
             this.ProductInfoGroupBox.SuspendLayout();
             this.TechSpecsGroupbox.SuspendLayout();
@@ -105,28 +105,10 @@
             this.fileToolStripMenuItem1.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem1.Text = "&File";
             // 
-            // openToolStripMenuItem1
-            // 
-            this.openToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("openToolStripMenuItem1.Image")));
-            this.openToolStripMenuItem1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.openToolStripMenuItem1.Name = "openToolStripMenuItem1";
-            this.openToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.openToolStripMenuItem1.Size = new System.Drawing.Size(146, 22);
-            this.openToolStripMenuItem1.Text = "&Open";
-            // 
             // toolStripSeparator
             // 
             this.toolStripSeparator.Name = "toolStripSeparator";
             this.toolStripSeparator.Size = new System.Drawing.Size(143, 6);
-            // 
-            // saveToolStripMenuItem1
-            // 
-            this.saveToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("saveToolStripMenuItem1.Image")));
-            this.saveToolStripMenuItem1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.saveToolStripMenuItem1.Name = "saveToolStripMenuItem1";
-            this.saveToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.saveToolStripMenuItem1.Size = new System.Drawing.Size(146, 22);
-            this.saveToolStripMenuItem1.Text = "&Save";
             // 
             // toolStripSeparator2
             // 
@@ -170,6 +152,7 @@
             this.ProductIDTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ProductIDTextbox.Location = new System.Drawing.Point(174, 40);
             this.ProductIDTextbox.Name = "ProductIDTextbox";
+            this.ProductIDTextbox.ReadOnly = true;
             this.ProductIDTextbox.Size = new System.Drawing.Size(100, 27);
             this.ProductIDTextbox.TabIndex = 2;
             // 
@@ -188,6 +171,7 @@
             this.ConditionTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ConditionTextbox.Location = new System.Drawing.Point(368, 44);
             this.ConditionTextbox.Name = "ConditionTextbox";
+            this.ConditionTextbox.ReadOnly = true;
             this.ConditionTextbox.Size = new System.Drawing.Size(100, 27);
             this.ConditionTextbox.TabIndex = 2;
             // 
@@ -206,6 +190,7 @@
             this.CostTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CostTextbox.Location = new System.Drawing.Point(584, 44);
             this.CostTextbox.Name = "CostTextbox";
+            this.CostTextbox.ReadOnly = true;
             this.CostTextbox.Size = new System.Drawing.Size(100, 27);
             this.CostTextbox.TabIndex = 2;
             // 
@@ -232,6 +217,7 @@
             this.ModelTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ModelTextbox.Location = new System.Drawing.Point(330, 90);
             this.ModelTextbox.Name = "ModelTextbox";
+            this.ModelTextbox.ReadOnly = true;
             this.ModelTextbox.Size = new System.Drawing.Size(353, 27);
             this.ModelTextbox.TabIndex = 2;
             // 
@@ -250,6 +236,7 @@
             this.OSTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OSTextBox.Location = new System.Drawing.Point(330, 38);
             this.OSTextBox.Name = "OSTextBox";
+            this.OSTextBox.ReadOnly = true;
             this.OSTextBox.Size = new System.Drawing.Size(353, 27);
             this.OSTextBox.TabIndex = 2;
             // 
@@ -278,6 +265,7 @@
             this.ManufacturerTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ManufacturerTextbox.Location = new System.Drawing.Point(136, 90);
             this.ManufacturerTextbox.Name = "ManufacturerTextbox";
+            this.ManufacturerTextbox.ReadOnly = true;
             this.ManufacturerTextbox.Size = new System.Drawing.Size(100, 27);
             this.ManufacturerTextbox.TabIndex = 2;
             // 
@@ -296,6 +284,7 @@
             this.PlatformTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PlatformTextbox.Location = new System.Drawing.Point(136, 38);
             this.PlatformTextbox.Name = "PlatformTextbox";
+            this.PlatformTextbox.ReadOnly = true;
             this.PlatformTextbox.Size = new System.Drawing.Size(100, 27);
             this.PlatformTextbox.TabIndex = 2;
             // 
@@ -332,6 +321,7 @@
             this.WebCamTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.WebCamTextbox.Location = new System.Drawing.Point(546, 138);
             this.WebCamTextbox.Name = "WebCamTextbox";
+            this.WebCamTextbox.ReadOnly = true;
             this.WebCamTextbox.Size = new System.Drawing.Size(137, 27);
             this.WebCamTextbox.TabIndex = 2;
             // 
@@ -350,6 +340,7 @@
             this.GPUTypeTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GPUTypeTextbox.Location = new System.Drawing.Point(546, 90);
             this.GPUTypeTextbox.Name = "GPUTypeTextbox";
+            this.GPUTypeTextbox.ReadOnly = true;
             this.GPUTypeTextbox.Size = new System.Drawing.Size(137, 27);
             this.GPUTypeTextbox.TabIndex = 2;
             // 
@@ -378,6 +369,7 @@
             this.HDDTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HDDTextbox.Location = new System.Drawing.Point(546, 41);
             this.HDDTextbox.Name = "HDDTextbox";
+            this.HDDTextbox.ReadOnly = true;
             this.HDDTextbox.Size = new System.Drawing.Size(137, 27);
             this.HDDTextbox.TabIndex = 2;
             // 
@@ -395,6 +387,7 @@
             this.CPUSpeedTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CPUSpeedTextbox.Location = new System.Drawing.Point(330, 138);
             this.CPUSpeedTextbox.Name = "CPUSpeedTextbox";
+            this.CPUSpeedTextbox.ReadOnly = true;
             this.CPUSpeedTextbox.Size = new System.Drawing.Size(100, 27);
             this.CPUSpeedTextbox.TabIndex = 2;
             // 
@@ -413,6 +406,7 @@
             this.CPUNumberTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CPUNumberTextbox.Location = new System.Drawing.Point(330, 90);
             this.CPUNumberTextbox.Name = "CPUNumberTextbox";
+            this.CPUNumberTextbox.ReadOnly = true;
             this.CPUNumberTextbox.Size = new System.Drawing.Size(100, 27);
             this.CPUNumberTextbox.TabIndex = 2;
             // 
@@ -450,6 +444,7 @@
             this.CPUTypeTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CPUTypeTextbox.Location = new System.Drawing.Point(115, 138);
             this.CPUTypeTextbox.Name = "CPUTypeTextbox";
+            this.CPUTypeTextbox.ReadOnly = true;
             this.CPUTypeTextbox.Size = new System.Drawing.Size(100, 27);
             this.CPUTypeTextbox.TabIndex = 2;
             // 
@@ -458,6 +453,7 @@
             this.LCDSizeTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LCDSizeTextbox.Location = new System.Drawing.Point(330, 41);
             this.LCDSizeTextbox.Name = "LCDSizeTextbox";
+            this.LCDSizeTextbox.ReadOnly = true;
             this.LCDSizeTextbox.Size = new System.Drawing.Size(100, 27);
             this.LCDSizeTextbox.TabIndex = 2;
             // 
@@ -466,6 +462,7 @@
             this.CPUBrandTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CPUBrandTextbox.Location = new System.Drawing.Point(115, 90);
             this.CPUBrandTextbox.Name = "CPUBrandTextbox";
+            this.CPUBrandTextbox.ReadOnly = true;
             this.CPUBrandTextbox.Size = new System.Drawing.Size(100, 27);
             this.CPUBrandTextbox.TabIndex = 2;
             // 
@@ -484,6 +481,7 @@
             this.MemoryTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MemoryTextbox.Location = new System.Drawing.Point(115, 41);
             this.MemoryTextbox.Name = "MemoryTextbox";
+            this.MemoryTextbox.ReadOnly = true;
             this.MemoryTextbox.Size = new System.Drawing.Size(100, 27);
             this.MemoryTextbox.TabIndex = 2;
             // 
@@ -536,13 +534,30 @@
             this.NextButton.UseVisualStyleBackColor = false;
             this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
             // 
+            // openToolStripMenuItem1
+            // 
+            this.openToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("openToolStripMenuItem1.Image")));
+            this.openToolStripMenuItem1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.openToolStripMenuItem1.Name = "openToolStripMenuItem1";
+            this.openToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
+            this.openToolStripMenuItem1.Size = new System.Drawing.Size(146, 22);
+            this.openToolStripMenuItem1.Text = "&Open";
+            // 
+            // saveToolStripMenuItem1
+            // 
+            this.saveToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("saveToolStripMenuItem1.Image")));
+            this.saveToolStripMenuItem1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.saveToolStripMenuItem1.Name = "saveToolStripMenuItem1";
+            this.saveToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.saveToolStripMenuItem1.Size = new System.Drawing.Size(146, 22);
+            this.saveToolStripMenuItem1.Text = "&Save";
+            // 
             // ProductInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(784, 561);
-            this.ControlBox = false;
             this.Controls.Add(this.NextButton);
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.AnotherFormButton);
@@ -557,8 +572,11 @@
             this.Controls.Add(this.ProductIDLabel);
             this.Controls.Add(this.ProductInfoFormMenuStrip);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.ProductInfoFormMenuStrip;
             this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ProductInfoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Product Information Form";
