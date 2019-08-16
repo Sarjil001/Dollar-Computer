@@ -13,6 +13,11 @@ namespace DollarComputers
 {
     public partial class OrderForm : Form
     {
+        //
+        public double Tax;
+        public double Total;
+        public double Cost;
+
         public OrderForm()
         {
             InitializeComponent();
@@ -32,7 +37,7 @@ namespace DollarComputers
         private void FinishButton_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Thank you for Shopping from Dollar Computers" +
-                " Your Order will be processed in 7-10 business days", "Order Confirmed",
+                "Your Order will be processed in 7-10 business days", "Order Confirmed",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -49,7 +54,7 @@ namespace DollarComputers
             {
                 //Read stuff to the file into the Student Object
                 Program.products.productID = short.Parse(inputStream.ReadLine());
-                // Program.products.cost = int.Parse(inputStream.ReadLine());
+                Program.products.cost = decimal.Parse(inputStream.ReadLine());
                 Program.products.manufacturer = inputStream.ReadLine();
                 Program.products.model = inputStream.ReadLine();
                 Program.products.RAM_size = inputStream.ReadLine();
@@ -74,6 +79,12 @@ namespace DollarComputers
                 inputStream.Close();
                 inputStream.Dispose();
 
+                //Calculation for the Sales Tax (13%)
+                Tax = Math.Round((double)Program.products.cost, 2);
+                Tax = Math.Round(Tax * 0.13, 2);
+                Cost = Math.Round((double)Program.products.cost, 2);
+                Total = Math.Round(Tax + Cost, 2);
+
                 ProductIDTextBox.Text = Program.products.productID.ToString();
                 ManufacturerTextbox.Text = Program.products.manufacturer;
                 ModelTextbox.Text = Program.products.model;
@@ -86,7 +97,9 @@ namespace DollarComputers
                 WidthTextBox.Text = Program.products.width;
                 MouseTypeTextBox.Text = Program.products.moust_type;
                 HeightTextBox.Text = Program.products.height;
-
+                PriceTextbox.Text = String.Format("{0:C}", Program.products.cost);
+                SalesTaxTextbox.Text = $"{Tax}";
+                TotalTextbox.Text = $"{Total}";
 
             }
         }

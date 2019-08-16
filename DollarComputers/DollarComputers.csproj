@@ -146,6 +146,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="laptop.ico" />
+    <None Include="Resources\download.jpg" />
     <None Include="Resources\mac.jpg" />
     <None Include="Resources\pc.jpg" />
   </ItemGroup>

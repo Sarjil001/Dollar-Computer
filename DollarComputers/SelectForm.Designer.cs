@@ -437,6 +437,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
+            this.BackgroundImage = global::DollarComputers.Properties.Resources.download;
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.NextButton);
             this.Controls.Add(this.CancelButton);
