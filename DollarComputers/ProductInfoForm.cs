@@ -9,6 +9,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/// <summary>
+/// Student Name: SARJIL RAVAL
+/// Student Number: 301043757
+/// Description: This is the ProductInfoForm, It shows the Specification of the Computer in the Labels and
+///              Textboxs from the saved data in the Text File.              
+/// </summary>
 namespace DollarComputers
 {
     public partial class ProductInfoForm : Form
@@ -18,23 +24,43 @@ namespace DollarComputers
             InitializeComponent();
         }
 
+        /// <summary>
+        /// This is the Event Handler for the exitToolStripMenuItem1_Click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void exitToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        /// <summary>
+        /// This the Event Handler for the selectAnotherProductToolStripMenuItem_Click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void selectAnotherProductToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Program.selectForm.Show();
             this.Hide();
         }
 
+        /// <summary>
+        /// This is the Event Handler for the NextButton_Click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void NextButton_Click(object sender, EventArgs e)
         {
             Program.orderForm.Show();
             this.Hide();
         }
 
+        /// <summary>
+        /// This is the Event Handler for the ProductInfoForm_Activated
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ProductInfoForm_Activated(object sender, EventArgs e)
         {
             //open File To Stream to read
@@ -63,6 +89,7 @@ namespace DollarComputers
                 inputStream.Close();
                 inputStream.Dispose();
 
+                //Loading the Saved Data From Program files in the Labels
                 ProductIDTextbox.Text = Program.products.productID.ToString();
                 CostTextbox.Text = String.Format("{0:C}",Program.products.cost);
                 ManufacturerTextbox.Text = Program.products.manufacturer;
@@ -81,10 +108,10 @@ namespace DollarComputers
                 WebCamTextbox.Text = Program.products.webcam;
 
             }
-          
-
         }
 
+        
+        }
     }
 
  }

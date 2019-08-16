@@ -11,6 +11,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/// <summary>
+/// Student Name: SARJIL RAVAL
+/// Student Number: 301043757
+/// Description: This is the SelectForm , It will start new Order and the User will select a 
+///              a computer on the basis of the specifications.
+/// </summary>
+
 namespace DollarComputers
 {
     public partial class SelectForm : Form
@@ -20,11 +27,21 @@ namespace DollarComputers
             InitializeComponent();
         }
 
+        /// <summary>
+        /// This is the Event Handler for the CancelButton_Click 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CancelButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        /// <summary>
+        /// This is the Event Handler for the NextButton_Click 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void NextButton_Click(object sender, EventArgs e)
         {
             var rowIndex = ComputerListDataGridView.CurrentCell.RowIndex;
@@ -72,6 +89,11 @@ namespace DollarComputers
                 this.Hide();
         }
 
+        /// <summary>
+        /// This is the Event Handler for the SelectForm_Load 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SelectForm_Load(object sender, EventArgs e)
         {
             using (var db = new DollarComputersContext())
@@ -81,11 +103,20 @@ namespace DollarComputers
             }
         }
 
+        /// <summary>
+        /// This is the Event Handler for the ComputerListDataGridView_SelectionChanged 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ComputerListDataGridView_SelectionChanged(object sender, EventArgs e)
         {
             DisplayOfSelectionTextbox.Text = ComputerListDataGridViewSelectedItem();
         }
 
+        /// <summary>
+        /// This is the Method made for Displaying Only the Manufacturer, Model and Cost of the Computer
+        /// </summary>
+        /// <returns></returns>
         private string ComputerListDataGridViewSelectedItem()
         {
             var rowIndex = ComputerListDataGridView.CurrentCell.RowIndex;

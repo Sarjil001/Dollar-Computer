@@ -8,6 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/// <summary>
+/// Student Name: SARJIL RAVAL
+/// Student Number: 301043757
+/// Description: This is the Splash Screen, It comes for 3 Sec before the Program
+/// </summary>
+
+
+
 namespace DollarComputers
 {
     public partial class SplashScreen : Form

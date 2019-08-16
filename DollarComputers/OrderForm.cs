@@ -9,11 +9,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/// <summary>
+/// Student Name: SARJIL RAVAL
+/// Student Number: 301043757
+/// Description: This is the Order form, It shows the price of the Computer selected and also can save it 
+///              for the Later. It is the Last Page of the Program.                           
+/// </summary>
+
 namespace DollarComputers
 {
     public partial class OrderForm : Form
     {
-        //
+        //Variables for the Tax
         public double Tax;
         public double Total;
         public double Cost;
@@ -23,17 +30,32 @@ namespace DollarComputers
             InitializeComponent();
         }
 
+        /// <summary>
+        /// This is the Event Handler for the BackButton_Click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BackButton_Click(object sender, EventArgs e)
         {
             Program.productinfoForm.Show();
             this.Hide();
         }
 
+        /// <summary>
+        /// This is the Event Handler for the CancelButton_Click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CancelButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        /// <summary>
+        /// This is the Event Handler for the FinishButton_Click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FinishButton_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Thank you for Shopping from Dollar Computers" +
@@ -41,11 +63,22 @@ namespace DollarComputers
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        /// <summary>
+        /// This is the Event Handler for the aboutToolStripMenuItem_Click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //It will show about Dialog Box
             Program.aboutForm.ShowDialog();
         }
 
+        /// <summary>
+        /// This is the Event Handler for the OrderForm_load
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void OrderForm_Load(object sender, EventArgs e)
         {
             //open File To Stream to read
@@ -85,6 +118,7 @@ namespace DollarComputers
                 Cost = Math.Round((double)Program.products.cost, 2);
                 Total = Math.Round(Tax + Cost, 2);
 
+                //Loading the values stored in the Product Form To the Label
                 ProductIDTextBox.Text = Program.products.productID.ToString();
                 ManufacturerTextbox.Text = Program.products.manufacturer;
                 ModelTextbox.Text = Program.products.model;

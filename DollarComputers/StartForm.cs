@@ -10,6 +10,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/// <summary>
+/// Student Name: SARJIL RAVAL
+/// Student Number: 301043757
+/// Description: This is the StartForm, It will show options for the New Computer or Load the Saved one
+/// </summary>
+
 namespace DollarComputers
 {
     public partial class StartForm : Form
@@ -19,19 +25,29 @@ namespace DollarComputers
             InitializeComponent();
         }
 
+        /// <summary>
+        /// This is the Event Handler for the NewOrderButton_Click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void NewOrderButton_Click(object sender, EventArgs e)
         {
             Program.selectForm.Show();
             this.Hide();
         }
 
+        /// <summary>
+        /// This is the Event Handler for the SavedOrderButton_Click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SavedOrderButton_Click(object sender, EventArgs e)
         {
-            //confgure the dile dialog
+            //confgure the file dialog
             OpenFileDialogBox.FileName = "Product.txt";
             OpenFileDialogBox.InitialDirectory = Directory.GetCurrentDirectory();
             OpenFileDialogBox.Filter = "Text Files (*.txt)|*.txt| All Files (*.*)|*.*";
-            //open the file diolog
+            //open the file dialog
             var result = OpenFileDialogBox.ShowDialog();
             if (result != DialogResult.Cancel)
             {
@@ -64,6 +80,7 @@ namespace DollarComputers
                 }
                 catch (IOException exception)
                 {
+                    //Will show error
                     Debug.WriteLine("ERROR " + exception.Message);
                     MessageBox.Show("ERROR " + exception.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -73,6 +90,11 @@ namespace DollarComputers
             this.Hide();
         }
 
+        /// <summary>
+        /// This is the Event Handler for ExitButton_Click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ExitButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
